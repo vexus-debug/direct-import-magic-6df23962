@@ -1108,6 +1108,162 @@ export type Database = {
           },
         ]
       }
+      eye_frames: {
+        Row: {
+          brand: string
+          colour: string | null
+          cost_price: number | null
+          created_at: string
+          gender: string | null
+          id: string
+          material: string | null
+          model: string | null
+          org_id: string
+          quantity: number
+          reorder_level: number
+          sell_price: number | null
+          size: string | null
+          sku: string | null
+          updated_at: string
+        }
+        Insert: {
+          brand: string
+          colour?: string | null
+          cost_price?: number | null
+          created_at?: string
+          gender?: string | null
+          id?: string
+          material?: string | null
+          model?: string | null
+          org_id: string
+          quantity?: number
+          reorder_level?: number
+          sell_price?: number | null
+          size?: string | null
+          sku?: string | null
+          updated_at?: string
+        }
+        Update: {
+          brand?: string
+          colour?: string | null
+          cost_price?: number | null
+          created_at?: string
+          gender?: string | null
+          id?: string
+          material?: string | null
+          model?: string | null
+          org_id?: string
+          quantity?: number
+          reorder_level?: number
+          sell_price?: number | null
+          size?: string | null
+          sku?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      eye_lens_stock: {
+        Row: {
+          coating: string | null
+          cost_price: number | null
+          created_at: string
+          id: string
+          lens_index: string | null
+          lens_type: string
+          org_id: string
+          power_range: string | null
+          quantity: number
+          reorder_level: number
+          sell_price: number | null
+          supplier: string | null
+          updated_at: string
+        }
+        Insert: {
+          coating?: string | null
+          cost_price?: number | null
+          created_at?: string
+          id?: string
+          lens_index?: string | null
+          lens_type: string
+          org_id: string
+          power_range?: string | null
+          quantity?: number
+          reorder_level?: number
+          sell_price?: number | null
+          supplier?: string | null
+          updated_at?: string
+        }
+        Update: {
+          coating?: string | null
+          cost_price?: number | null
+          created_at?: string
+          id?: string
+          lens_index?: string | null
+          lens_type?: string
+          org_id?: string
+          power_range?: string | null
+          quantity?: number
+          reorder_level?: number
+          sell_price?: number | null
+          supplier?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      eye_referrals: {
+        Row: {
+          contact: string | null
+          created_at: string
+          direction: string
+          facility: string | null
+          feedback: string | null
+          id: string
+          org_id: string
+          patient_id: string
+          practitioner: string | null
+          reason: string | null
+          referral_date: string
+          specialty: string | null
+          status: string
+          updated_at: string
+          urgency: string
+        }
+        Insert: {
+          contact?: string | null
+          created_at?: string
+          direction?: string
+          facility?: string | null
+          feedback?: string | null
+          id?: string
+          org_id: string
+          patient_id: string
+          practitioner?: string | null
+          reason?: string | null
+          referral_date?: string
+          specialty?: string | null
+          status?: string
+          updated_at?: string
+          urgency?: string
+        }
+        Update: {
+          contact?: string | null
+          created_at?: string
+          direction?: string
+          facility?: string | null
+          feedback?: string | null
+          id?: string
+          org_id?: string
+          patient_id?: string
+          practitioner?: string | null
+          reason?: string | null
+          referral_date?: string
+          specialty?: string | null
+          status?: string
+          updated_at?: string
+          urgency?: string
+        }
+        Relationships: []
+      }
       feature_flags: {
         Row: {
           created_at: string
@@ -2120,6 +2276,7 @@ export type Database = {
           lens_price: number
           lens_type: string | null
           notes: string | null
+          notified_at: string | null
           order_date: string
           order_number: string | null
           org_id: string
@@ -2143,6 +2300,7 @@ export type Database = {
           lens_price?: number
           lens_type?: string | null
           notes?: string | null
+          notified_at?: string | null
           order_date?: string
           order_number?: string | null
           org_id: string
@@ -2166,6 +2324,7 @@ export type Database = {
           lens_price?: number
           lens_type?: string | null
           notes?: string | null
+          notified_at?: string | null
           order_date?: string
           order_number?: string | null
           org_id?: string
@@ -4473,6 +4632,8 @@ export type Database = {
           org_id: string
           outcome_notes: string | null
           patient_id: string
+          postop_checklist: Json
+          postop_notes: string | null
           preop_checklist: Json
           procedure_name: string
           scheduled_date: string | null
@@ -4493,6 +4654,8 @@ export type Database = {
           org_id: string
           outcome_notes?: string | null
           patient_id: string
+          postop_checklist?: Json
+          postop_notes?: string | null
           preop_checklist?: Json
           procedure_name: string
           scheduled_date?: string | null
@@ -4513,6 +4676,8 @@ export type Database = {
           org_id?: string
           outcome_notes?: string | null
           patient_id?: string
+          postop_checklist?: Json
+          postop_notes?: string | null
           preop_checklist?: Json
           procedure_name?: string
           scheduled_date?: string | null
@@ -5253,6 +5418,7 @@ export type Database = {
           patient_id: string
           priority: number
           seen_time: string | null
+          stage: string
           status: string
         }
         Insert: {
@@ -5268,6 +5434,7 @@ export type Database = {
           patient_id: string
           priority?: number
           seen_time?: string | null
+          stage?: string
           status?: string
         }
         Update: {
@@ -5283,6 +5450,7 @@ export type Database = {
           patient_id?: string
           priority?: number
           seen_time?: string | null
+          stage?: string
           status?: string
         }
         Relationships: [
